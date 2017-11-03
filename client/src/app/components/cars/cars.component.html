@@ -1,0 +1,46 @@
+<div class="container my-container">
+  <ngb-tabset>
+    <ngb-tab title="Unrented cars ({{unrentedCars.length}})">
+      <ng-template ngbTabContent>
+        <div class="row">
+          <div class="col-md-3 card my-card" *ngFor="let car of unrentedCars">
+            <img class="card-img-top my-image" src="{{car.image}}" alt="Photo">
+            <div class="card-block">
+              <h4 class="card-title">{{car.manufacturer}}</h4>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Année {{car.year}}</li>
+              <li class="list-group-item">{{car.km}} km</li>
+              <li class="list-group-item">{{car.plateNumber}}</li>
+            </ul>
+            <div class="card-block">
+              <button type="button" class="btn btn-primary my-pointer" (click)="rentCar(car.plateNumber)">Rent - {{car.price}} €</button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-tab>
+
+    <ngb-tab title="Rented cars ({{rentedCars.length}})">
+      <ng-template ngbTabContent>
+        <div class="row">
+          <div class="col-md-3 card my-card" *ngFor="let car of rentedCars">
+            <img class="card-img-top my-image" src="{{car.image}}" alt="Photo">
+            <div class="card-block">
+              <h4 class="card-title">{{car.manufacturer}}</h4>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Année {{car.year}}</li>
+              <li class="list-group-item">{{car.km}} km</li>
+              <li class="list-group-item">{{car.plateNumber}}</li>
+              <li class="list-group-item">{{car.price}} €</li>
+            </ul>
+            <div class="card-block">
+              <button type="button" class="btn btn-primary my-pointer" (click)="getBackCar(car.plateNumber)">Get back</button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>
