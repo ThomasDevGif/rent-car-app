@@ -29,6 +29,10 @@ public class CarService {
         CarRepository.removeUnrentedCar(plateNumber);
     }
 
+    public void addCar(Car car) {
+        CarRepository.addUnrentedCar(car);
+    }
+
     public static void initCars() {
         Car car = new Car();
         car.setPlateNumber("OP159GG");
@@ -89,6 +93,7 @@ public class CarService {
         CarRepository.addUnrentedCar(car3);
         CarRepository.addUnrentedCar(car4);
         CarRepository.addUnrentedCar(car5);
+        CarRepository.addUnrentedCar(car6);
 
         System.out.println("Initialization done.");
     }

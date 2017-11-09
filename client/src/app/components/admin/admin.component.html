@@ -1,0 +1,56 @@
+<div class="container my-container">
+  <form>
+    <fieldset>
+      <legend>Add a car</legend>
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-car" aria-hidden="true"></i></div>
+          <input type="text" class="form-control" [(ngModel)]="myCar.plateNumber" name="plateNumber" placeholder="Plate Number" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-car" aria-hidden="true"></i></div>
+          <input type="text" class="form-control" [(ngModel)]="myCar.manufacturer" name="manufacturer" placeholder="Manufacturer" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-car" aria-hidden="true"></i></div>
+          <input type="text" class="form-control" [(ngModel)]="myCar.brand" name="brand" placeholder="Brand" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+          <select class="form-control" [(ngModel)]="myCar.year" name="year" required>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-car" aria-hidden="true"></i></div>
+          <input type="number" class="form-control" [(ngModel)]="myCar.km" name="km" placeholder="Km" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-eur" aria-hidden="true"></i></div>
+          <input type="number" class="form-control" [(ngModel)]="myCar.price" name="price" placeholder="Price" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-file-image-o" aria-hidden="true"></i></div>
+          <textarea class="form-control" rows="3" [(ngModel)]="myCar.image" name="image" placeholder="Image URL" required></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary my-pointer" (click)="addCar()">Validate</button>
+    </fieldset>
+  </form>
+</div>

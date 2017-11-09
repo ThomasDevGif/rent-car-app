@@ -12,6 +12,7 @@ export class RestService {
 
   private baseUrl = 'http://localhost:8080/';  // URL to web api
   private headers = new Headers();
+  private headersJson = new Headers({ 'Content-Type': 'application/json' });
 
   constructor(private http: Http) { }
 
@@ -41,6 +42,12 @@ export class RestService {
      var url = this.baseUrl + 'car/' + plateNumber;
      return this.http.delete(url)
        .toPromise();
+  }
+
+  addCar(car : Car): Promise<any> {
+    var url = this.baseUrl + 'car';
+    return this.http.post(url, car, {headers: this.headersJson})
+      .toPromise();
   }
 
   private handleError(error: any): Promise<any> {

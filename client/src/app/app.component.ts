@@ -10,7 +10,8 @@ export class AppComponent {
   title = 'RestClient';
   items = [
     { name: 'Home', link: '/' },
-    { name: 'Cars', link: '/cars' }
+    { name: 'Cars', link: '/cars' },
+    { name: 'Admin', link: '/admin' }
   ]
 
   constructor (

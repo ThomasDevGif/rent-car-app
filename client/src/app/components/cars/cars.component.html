@@ -6,10 +6,10 @@
           <div class="col-md-3 card my-card" *ngFor="let car of unrentedCars">
             <img class="card-img-top my-image" src="{{car.image}}" alt="Photo">
             <div class="card-block">
-              <h4 class="card-title">{{car.manufacturer}}</h4>
+              <h4 class="card-title">{{car.manufacturer}} - <span class="my-subtitle">{{car.brand}}</span></h4>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Année {{car.year}}</li>
+              <li class="list-group-item">Year {{car.year}}</li>
               <li class="list-group-item">{{car.km}} km</li>
               <li class="list-group-item">{{car.plateNumber}}</li>
             </ul>
@@ -30,7 +30,7 @@
               <h4 class="card-title">{{car.manufacturer}}</h4>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Année {{car.year}}</li>
+              <li class="list-group-item">Year {{car.year}}</li>
               <li class="list-group-item">{{car.km}} km</li>
               <li class="list-group-item">{{car.plateNumber}}</li>
               <li class="list-group-item">{{car.price}} €</li>

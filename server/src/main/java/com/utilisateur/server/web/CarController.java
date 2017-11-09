@@ -41,4 +41,11 @@ public class CarController {
         CarService carService = new CarService();
         carService.rentCar(plateNumber);
     }
+
+    @RequestMapping(value = "/car", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.OK)
+    public void addCar(@RequestBody Car car) throws Exception{
+        CarService carService = new CarService();
+        carService.addCar(car);
+    }
 }
